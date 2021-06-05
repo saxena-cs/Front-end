@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Validation</title>
+    <script type="application/javascript">
+     function validator(){
+         var uname = document.getElementById("username");
+         var phone = document.getElementById("contact");
+         var email_add = document.getElementById("email");
+         if(uname.value=="")
+           {
+                alert("Please fill Your Name  Properly!")
+                 uname.focus();
+                 return false;
+
+           }
+         if(phone.value=="")
+             {
+                  alert("Please fill Conatact details!")
+                  phone.focus();
+                  return false;
+             }
+         if(email_add.value=="")
+              { 
+                   alert("Please fill email deatils!")
+                   email_add.focus();
+                   return false;
+              }
+        alert("Form Submitted Successfully!")
+        document.write("Hello "+uname.value+" your contact number is "+phone.value+" and your email is "+email_add.value);
+        document.write("<br><br>")
+        document.write("<a href = form.html>Submit Another Entry</a>")
+        return true;
+     }
+   </script>
+</head>
+<body>
+    <form id="f1" onsubmit="return validator()">
+        <label for="username">User Name: </label>
+        <input type="text" id="username"/><br><br>
+        <label for="contact">Contact: </label>
+        <input type="number" id="contact"/><br><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email"/><br><br>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+
